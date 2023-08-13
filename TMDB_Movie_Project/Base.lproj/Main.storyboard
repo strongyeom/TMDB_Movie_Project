@@ -45,11 +45,12 @@
                                             </cells>
                                         </collectionView>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="ioy-vN-DIy" firstAttribute="top" secondItem="XyH-38-2BO" secondAttribute="top" id="LQL-xc-FCW"/>
-                                        <constraint firstAttribute="trailing" secondItem="ioy-vN-DIy" secondAttribute="trailing" id="eIa-TQ-ieK"/>
-                                        <constraint firstItem="ioy-vN-DIy" firstAttribute="leading" secondItem="XyH-38-2BO" secondAttribute="leading" id="kCA-Lc-NXH"/>
-                                        <constraint firstAttribute="bottom" secondItem="ioy-vN-DIy" secondAttribute="bottom" id="kwK-47-K4N"/>
+                                        <constraint firstAttribute="bottom" secondItem="ioy-vN-DIy" secondAttribute="bottom" id="5PR-cL-S7W"/>
+                                        <constraint firstItem="ioy-vN-DIy" firstAttribute="leading" secondItem="XyH-38-2BO" secondAttribute="leading" id="Es0-Ha-6hf"/>
+                                        <constraint firstAttribute="trailing" secondItem="ioy-vN-DIy" secondAttribute="trailing" id="Ojo-Aq-icq"/>
+                                        <constraint firstItem="ioy-vN-DIy" firstAttribute="top" secondItem="XyH-38-2BO" secondAttribute="top" id="q1x-La-ub2"/>
                                     </constraints>
                                 </view>
                             </tableView>

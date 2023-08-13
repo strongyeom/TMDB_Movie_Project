@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 class MainViewController: UIViewController {
     
-    
+    var movieList: [TMDBMovie] = []
+    var tvList: [TMDBTV] = []
     
     @IBOutlet var movieCollectionView: UICollectionView!
     @IBOutlet var mediaTableView: UITableView!
@@ -19,6 +23,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupMovie()
         setupMedia()
+        callMovieRequest()
+        callTVRequest()
     }
     
     func setupMovie() {
@@ -44,28 +50,55 @@ class MainViewController: UIViewController {
         movieCollectionView.collectionViewLayout = layout
     }
     
+    func callMovieRequest() {
+        NetworkManger.shared.callMovieRequest { movieResult in
+            self.movieList = movieResult
+            self.movieCollectionView.reloadData()
+        }
+    }
+    
+    func callTVRequest() {
+        NetworkManger.shared.callTVRequest { mediaResult in
+            self.tvList = mediaResult
+            self.mediaTableView.reloadData()
+        }
+    }
+ 
+    
     func setupMedia() {
         mediaTableView.dataSource = self
         mediaTableView.delegate = self
         let mediaNib = UINib(nibName: MediaTableViewCell.identifier, bundle: nil)
         mediaTableView.register(mediaNib, forCellReuseIdentifier: MediaTableViewCell.identifier)
         mediaTableView.rowHeight = 120
+        mediaTableView.separatorStyle = .none
     }
 
 }
 
 
 
+// MARK: - TableView
 extension MainViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "TV부문"
     }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "영화 부문"
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tvList.count
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.identifier, for: indexPath) as? MediaTableViewCell else { return UITableViewCell() }
-       // let row = list[indexPath.row]
         
+        let row = tvList[indexPath.row]
+        cell.configure(row: row)
         return cell
     }
 }
@@ -76,14 +109,16 @@ extension MainViewController: UITableViewDelegate {
 
 
 
+// MARK: - CollectionView
 extension MainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return movieList.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.identifier, for: indexPath) as? MovieCollectionViewCell else { return UICollectionViewCell() }
-        // let item = list[indexPath.item]
+        let item = movieList[indexPath.item]
+        cell.confiure(item: item)
         return cell
     }
     

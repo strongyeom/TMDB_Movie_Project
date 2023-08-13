@@ -6,22 +6,23 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var movieThumbnailImage: UIImageView!
-    
-    @IBOutlet var movieTitleLabel: UILabel!
-    
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
         movieThumbnailImage.backgroundColor = .green
         movieThumbnailImage.contentMode = .scaleToFill
-        movieTitleLabel.textAlignment = .center
-        movieTitleLabel.font = .systemFont(ofSize: 20, weight: .medium)
+    }
+    
+    func confiure(item: TMDBMovie) {
+        let url = URL(string: item.thumbnailTtle)
+        self.movieThumbnailImage.kf.setImage(with: url)
+        
     }
 
 }
