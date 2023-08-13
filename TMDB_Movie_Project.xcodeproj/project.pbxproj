@@ -18,7 +18,7 @@
 		26CE8D442A88A0A800EE3865 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CE8D422A88A0A800EE3865 /* MovieCollectionViewCell.swift */; };
 		26CE8D452A88A0A800EE3865 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CE8D432A88A0A800EE3865 /* MovieCollectionViewCell.xib */; };
 		26CE8D472A88A18200EE3865 /* MediaReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CE8D462A88A18200EE3865 /* MediaReusableViewProtocol.swift */; };
-		26CE8D4B2A88A33A00EE3865 /* .ignore in Resources */ = {isa = PBXBuildFile; fileRef = 26CE8D4A2A88A33A00EE3865 /* .ignore */; };
+		26CE8D512A88A8EA00EE3865 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 26CE8D502A88A8EA00EE3865 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		26CE8D422A88A0A800EE3865 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		26CE8D432A88A0A800EE3865 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		26CE8D462A88A18200EE3865 /* MediaReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaReusableViewProtocol.swift; sourceTree = "<group>"; };
-		26CE8D4A2A88A33A00EE3865 /* .ignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .ignore; sourceTree = "<group>"; };
+		26CE8D502A88A8EA00EE3865 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				26CE8D342A8896A300EE3865 /* LaunchScreen.storyboard */,
 				26CE8D372A8896A300EE3865 /* Info.plist */,
 				26CE8D462A88A18200EE3865 /* MediaReusableViewProtocol.swift */,
-				26CE8D4A2A88A33A00EE3865 /* .ignore */,
+				26CE8D502A88A8EA00EE3865 /* .gitignore */,
 			);
 			path = TMDB_Movie_Project;
 			sourceTree = "<group>";
@@ -154,8 +154,8 @@
 				26CE8D452A88A0A800EE3865 /* MovieCollectionViewCell.xib in Resources */,
 				26CE8D362A8896A300EE3865 /* LaunchScreen.storyboard in Resources */,
 				26CE8D332A8896A300EE3865 /* Assets.xcassets in Resources */,
-				26CE8D4B2A88A33A00EE3865 /* .ignore in Resources */,
 				26CE8D412A889E2C00EE3865 /* MediaTableViewCell.xib in Resources */,
+				26CE8D512A88A8EA00EE3865 /* .gitignore in Resources */,
 				26CE8D312A8896A100EE3865 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
