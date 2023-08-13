@@ -26,6 +26,7 @@
 		26E2A0852A88B36E00DE1FC5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 26E2A0842A88B36E00DE1FC5 /* Kingfisher */; };
 		26E2A0872A88BA0400DE1FC5 /* TMDBTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2A0862A88BA0400DE1FC5 /* TMDBTV.swift */; };
 		26E2A08C2A88BE0300DE1FC5 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2A08B2A88BE0300DE1FC5 /* NetWorkManager.swift */; };
+		26E2A08E2A88E2B400DE1FC5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2A08D2A88E2B400DE1FC5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		26E2A0812A88B19100DE1FC5 /* TMDBMoVie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMoVie.swift; sourceTree = "<group>"; };
 		26E2A0862A88BA0400DE1FC5 /* TMDBTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTV.swift; sourceTree = "<group>"; };
 		26E2A08B2A88BE0300DE1FC5 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		26E2A08D2A88E2B400DE1FC5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				26CE8D292A8896A100EE3865 /* AppDelegate.swift */,
 				26CE8D2B2A8896A100EE3865 /* SceneDelegate.swift */,
 				26CE8D2D2A8896A100EE3865 /* MainViewController.swift */,
+				26E2A08D2A88E2B400DE1FC5 /* DetailViewController.swift */,
 				26CE8D2F2A8896A100EE3865 /* Main.storyboard */,
 				26CE8D322A8896A300EE3865 /* Assets.xcassets */,
 				26CE8D342A8896A300EE3865 /* LaunchScreen.storyboard */,
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E2A08E2A88E2B400DE1FC5 /* DetailViewController.swift in Sources */,
 				26E2A08C2A88BE0300DE1FC5 /* NetWorkManager.swift in Sources */,
 				26CE8D2E2A8896A100EE3865 /* MainViewController.swift in Sources */,
 				26E2A0822A88B19100DE1FC5 /* TMDBMoVie.swift in Sources */,

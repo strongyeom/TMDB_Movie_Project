@@ -13,4 +13,5 @@ struct TMDBMovie {
     var title: String
     var releaseDate: String
     var overview: String
+    var starRate: Double
 }

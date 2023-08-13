@@ -61,8 +61,8 @@ class NetworkManger {
                     let release = item["release_date"].stringValue
                     let overview = item["overview"].stringValue
                     let id = item["id"].intValue
-                    
-                    let data = TMDBMovie(id: id, thumbnailTtle: thumbnail, title: title, releaseDate: release, overview: overview)
+                    let star = item["vote_average"].doubleValue
+                    let data = TMDBMovie(id: id, thumbnailTtle: thumbnail, title: title, releaseDate: release, overview: overview, starRate: star)
                     
                     self.resultMovie.append(data)
                 }
@@ -73,5 +73,20 @@ class NetworkManger {
             }
         }
     }
+    
+    func detailRequest() {
+        let url = "https://api.themoviedb.org/3/movie/447365?api_key=\(APIKey.movieKey)"
+        
+        AF.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     
 }

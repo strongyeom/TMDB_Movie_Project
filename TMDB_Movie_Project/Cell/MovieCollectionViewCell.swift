@@ -15,7 +15,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        movieThumbnailImage.backgroundColor = .green
         movieThumbnailImage.contentMode = .scaleToFill
     }
     
