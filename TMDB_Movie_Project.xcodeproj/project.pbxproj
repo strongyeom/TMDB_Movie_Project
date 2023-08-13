@@ -27,6 +27,8 @@
 		26E2A0872A88BA0400DE1FC5 /* TMDBTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2A0862A88BA0400DE1FC5 /* TMDBTV.swift */; };
 		26E2A08C2A88BE0300DE1FC5 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2A08B2A88BE0300DE1FC5 /* NetWorkManager.swift */; };
 		26E2A08E2A88E2B400DE1FC5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2A08D2A88E2B400DE1FC5 /* DetailViewController.swift */; };
+		26E2A0912A88EA6E00DE1FC5 /* MediaEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2A0902A88EA6E00DE1FC5 /* MediaEnum.swift */; };
+		26E2A0932A88EC4900DE1FC5 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2A0922A88EC4900DE1FC5 /* Media.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		26E2A0862A88BA0400DE1FC5 /* TMDBTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTV.swift; sourceTree = "<group>"; };
 		26E2A08B2A88BE0300DE1FC5 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		26E2A08D2A88E2B400DE1FC5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		26E2A0902A88EA6E00DE1FC5 /* MediaEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaEnum.swift; sourceTree = "<group>"; };
+		26E2A0922A88EC4900DE1FC5 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		26CE8D282A8896A100EE3865 /* TMDB_Movie_Project */ = {
 			isa = PBXGroup;
 			children = (
+				26E2A08F2A88EA6300DE1FC5 /* Enum */,
 				26E2A08A2A88BDF600DE1FC5 /* NetWorkManger */,
 				26E2A0892A88BDD400DE1FC5 /* Protocol */,
 				26E2A0882A88BDD000DE1FC5 /* APIKey */,
@@ -118,6 +123,7 @@
 			children = (
 				26E2A0812A88B19100DE1FC5 /* TMDBMoVie.swift */,
 				26E2A0862A88BA0400DE1FC5 /* TMDBTV.swift */,
+				26E2A0922A88EC4900DE1FC5 /* Media.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +150,14 @@
 				26E2A08B2A88BE0300DE1FC5 /* NetWorkManager.swift */,
 			);
 			path = NetWorkManger;
+			sourceTree = "<group>";
+		};
+		26E2A08F2A88EA6300DE1FC5 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				26E2A0902A88EA6E00DE1FC5 /* MediaEnum.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,12 +247,14 @@
 				26E2A08E2A88E2B400DE1FC5 /* DetailViewController.swift in Sources */,
 				26E2A08C2A88BE0300DE1FC5 /* NetWorkManager.swift in Sources */,
 				26CE8D2E2A8896A100EE3865 /* MainViewController.swift in Sources */,
+				26E2A0912A88EA6E00DE1FC5 /* MediaEnum.swift in Sources */,
 				26E2A0822A88B19100DE1FC5 /* TMDBMoVie.swift in Sources */,
 				26CE8D532A88A90D00EE3865 /* APIKey.swift in Sources */,
 				26CE8D2A2A8896A100EE3865 /* AppDelegate.swift in Sources */,
 				26CE8D442A88A0A800EE3865 /* MovieCollectionViewCell.swift in Sources */,
 				26CE8D472A88A18200EE3865 /* MediaReusableViewProtocol.swift in Sources */,
 				26E2A0872A88BA0400DE1FC5 /* TMDBTV.swift in Sources */,
+				26E2A0932A88EC4900DE1FC5 /* Media.swift in Sources */,
 				26CE8D402A889E2C00EE3865 /* MediaTableViewCell.swift in Sources */,
 				26CE8D2C2A8896A100EE3865 /* SceneDelegate.swift in Sources */,
 			);

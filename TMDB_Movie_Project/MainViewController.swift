@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
     var movieList: [TMDBMovie] = []
     var tvList: [TMDBTV] = []
     
+    var mediaEnum: MediaEnum = .tv
+    
     @IBOutlet var movieCollectionView: UICollectionView!
     @IBOutlet var mediaTableView: UITableView!
     
@@ -69,6 +71,13 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("TableView - \(indexPath.row)")
+        
+        let selected = tvList[indexPath.row]
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
+        vc.id = selected.id
+        vc.media = .tv
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -97,8 +106,12 @@ extension MainViewController: UICollectionViewDataSource {
         print("collectionView - \(indexPath.row)")
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
-        guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
+        let selected = movieList[indexPath.item]
         
+        guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
+        vc.id = selected.id
+        vc.media = .movie
+        vc.title = "영화 상세 정보"
         navigationController?.pushViewController(vc, animated: true)
     }
     
