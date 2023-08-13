@@ -19,8 +19,19 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
     func confiure(item: TMDBMovie) {
-        let url = URL(string: item.thumbnailTtle)
-        self.movieThumbnailImage.kf.setImage(with: url)
+        let url = URL(string: item.thumbnailTtle)!
+       // self.movieThumbnailImage.kf.setImage(with: url)
+        
+        
+        DispatchQueue.global().async {
+            let data = try! Data(contentsOf: url)
+            DispatchQueue.main.async {
+                self.movieThumbnailImage.image = UIImage(data: data)
+            }
+        }
+       
+        
+       
         
     }
 

@@ -23,10 +23,15 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavibar()
         setupMovie()
         setupMedia()
         callMovieRequest()
         callTVRequest()
+    }
+    
+    func setupNavibar() {
+        navigationItem.title = "TMDB 데이터"
     }
     
     func callMovieRequest() {

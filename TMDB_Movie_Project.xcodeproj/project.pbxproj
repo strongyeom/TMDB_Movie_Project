@@ -88,16 +88,15 @@
 		26CE8D282A8896A100EE3865 /* TMDB_Movie_Project */ = {
 			isa = PBXGroup;
 			children = (
+				26CE8D292A8896A100EE3865 /* AppDelegate.swift */,
+				26CE8D2B2A8896A100EE3865 /* SceneDelegate.swift */,
+				26E2A0942A88FFD700DE1FC5 /* VC */,
 				26E2A08F2A88EA6300DE1FC5 /* Enum */,
 				26E2A08A2A88BDF600DE1FC5 /* NetWorkManger */,
 				26E2A0892A88BDD400DE1FC5 /* Protocol */,
 				26E2A0882A88BDD000DE1FC5 /* APIKey */,
 				26E2A0802A88B17F00DE1FC5 /* Model */,
 				26CE8D3D2A889D4B00EE3865 /* Cell */,
-				26CE8D292A8896A100EE3865 /* AppDelegate.swift */,
-				26CE8D2B2A8896A100EE3865 /* SceneDelegate.swift */,
-				26CE8D2D2A8896A100EE3865 /* MainViewController.swift */,
-				26E2A08D2A88E2B400DE1FC5 /* DetailViewController.swift */,
 				26CE8D2F2A8896A100EE3865 /* Main.storyboard */,
 				26CE8D322A8896A300EE3865 /* Assets.xcassets */,
 				26CE8D342A8896A300EE3865 /* LaunchScreen.storyboard */,
@@ -158,6 +157,15 @@
 				26E2A0902A88EA6E00DE1FC5 /* MediaEnum.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		26E2A0942A88FFD700DE1FC5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				26CE8D2D2A8896A100EE3865 /* MainViewController.swift */,
+				26E2A08D2A88E2B400DE1FC5 /* DetailViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
