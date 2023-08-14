@@ -28,9 +28,9 @@ class MediaTableViewCell: UITableViewCell {
 
     }
     
-    func configure(row: TMDBTV) {
-       
-        settingImageKingfisher(url: row.thumbnailTitle)
+    func configure(row: TMDBResult) {
+        print("MediaTableViewCell - configure \(row.thumbnailTitle!)")
+        settingImageKingfisher(url: row.poster)
         self.tvTitle.text = row.name
         self.releaseDateLabel.text = row.releaseDate
     }

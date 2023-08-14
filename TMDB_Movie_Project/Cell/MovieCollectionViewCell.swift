@@ -18,8 +18,9 @@ class MovieCollectionViewCell: UICollectionViewCell {
         movieThumbnailImage.contentMode = .scaleToFill
     }
     
-    func confiure(item: TMDBMovie) {
-        let url = URL(string: item.thumbnailTtle)!
+    func confiure(item: TMDBMovieResult) {
+        
+        let url = URL(string: item.poster)!
        // self.movieThumbnailImage.kf.setImage(with: url)
         
         
@@ -30,9 +31,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
             }
         }
        
-        
-       
-        
     }
 
 }

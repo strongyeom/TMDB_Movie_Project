@@ -12,8 +12,8 @@ import SwiftyJSON
 
 class MainViewController: UIViewController {
     
-    var movieList: [TMDBMovie] = []
-    var tvList: [TMDBTV] = []
+    var movieList: [TMDBMovieResult]?
+    var tvList: [TMDBResult]?
     
     var mediaEnum: MediaEnum = .tv
     
@@ -26,24 +26,26 @@ class MainViewController: UIViewController {
         setupNavibar()
         setupMovie()
         setupMedia()
-        callMovieRequest()
-        callTVRequest()
+        setupNetworkMovie()
+        setupNetworkTV()
     }
     
     func setupNavibar() {
         navigationItem.title = "TMDB 데이터"
     }
     
-    func callMovieRequest() {
-        NetworkManger.shared.callMovieRequest { movieResult in
-            self.movieList = movieResult
+    func setupNetworkMovie() {
+        NetworkManger.shared.callMovieRequest { result in
+            self.movieList = result.results
             self.movieCollectionView.reloadData()
         }
     }
     
-    func callTVRequest() {
-        NetworkManger.shared.callTVRequest { mediaResult in
-            self.tvList = mediaResult
+    func setupNetworkTV() {
+
+        NetworkManger.shared.callTVRequest { result in
+            self.tvList = result.results
+            print("tvList",self.tvList!)
             self.mediaTableView.reloadData()
         }
     }
@@ -62,12 +64,14 @@ extension MainViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let tvList = tvList else { return 0 }
         return tvList.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.identifier, for: indexPath) as? MediaTableViewCell else { return UITableViewCell() }
+        guard let tvList else { return UITableViewCell() }
         
         let row = tvList[indexPath.row]
         cell.configure(row: row)
@@ -76,7 +80,7 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("TableView - \(indexPath.row)")
-        
+        guard let tvList else { return }
         let selected = tvList[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
@@ -97,11 +101,12 @@ extension MainViewController: UITableViewDelegate {
 extension MainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let movieList = movieList else { return 0}
         return movieList.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.identifier, for: indexPath) as? MovieCollectionViewCell else { return UICollectionViewCell() }
-        
+        guard let movieList else { return UICollectionViewCell() }
         let item = movieList[indexPath.item]
         cell.confiure(item: item)
         return cell
@@ -110,7 +115,7 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("collectionView - \(indexPath.row)")
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        
+        guard let movieList else { return }
         let selected = movieList[indexPath.item]
         
         guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
