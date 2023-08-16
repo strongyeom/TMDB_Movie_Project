@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264669D92A8D1F6F00D771BA /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264669D72A8D1F6F00D771BA /* HeaderCollectionReusableView.swift */; };
+		264669DA2A8D1F6F00D771BA /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 264669D82A8D1F6F00D771BA /* HeaderCollectionReusableView.xib */; };
+		264669DC2A8D268E00D771BA /* TMDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264669DB2A8D268E00D771BA /* TMDBViewController.swift */; };
+		264669DE2A8D2EF500D771BA /* Witcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264669DD2A8D2EF500D771BA /* Witcher.swift */; };
 		26CE8D2A2A8896A100EE3865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CE8D292A8896A100EE3865 /* AppDelegate.swift */; };
 		26CE8D2C2A8896A100EE3865 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CE8D2B2A8896A100EE3865 /* SceneDelegate.swift */; };
 		26CE8D2E2A8896A100EE3865 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CE8D2D2A8896A100EE3865 /* MainViewController.swift */; };
@@ -32,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		264669D72A8D1F6F00D771BA /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		264669D82A8D1F6F00D771BA /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		264669DB2A8D268E00D771BA /* TMDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBViewController.swift; sourceTree = "<group>"; };
+		264669DD2A8D2EF500D771BA /* Witcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Witcher.swift; sourceTree = "<group>"; };
 		26CE8D262A8896A100EE3865 /* TMDB_Movie_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB_Movie_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CE8D292A8896A100EE3865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26CE8D2B2A8896A100EE3865 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +121,8 @@
 				26CE8D3F2A889E2C00EE3865 /* MediaTableViewCell.xib */,
 				26CE8D422A88A0A800EE3865 /* MovieCollectionViewCell.swift */,
 				26CE8D432A88A0A800EE3865 /* MovieCollectionViewCell.xib */,
+				264669D72A8D1F6F00D771BA /* HeaderCollectionReusableView.swift */,
+				264669D82A8D1F6F00D771BA /* HeaderCollectionReusableView.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -123,6 +133,7 @@
 				26E2A0812A88B19100DE1FC5 /* TMDBMoVie.swift */,
 				26E2A0862A88BA0400DE1FC5 /* TMDBTV.swift */,
 				26E2A0922A88EC4900DE1FC5 /* Media.swift */,
+				264669DD2A8D2EF500D771BA /* Witcher.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +175,7 @@
 			children = (
 				26CE8D2D2A8896A100EE3865 /* MainViewController.swift */,
 				26E2A08D2A88E2B400DE1FC5 /* DetailViewController.swift */,
+				264669DB2A8D268E00D771BA /* TMDBViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -236,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264669DA2A8D1F6F00D771BA /* HeaderCollectionReusableView.xib in Resources */,
 				26CE8D452A88A0A800EE3865 /* MovieCollectionViewCell.xib in Resources */,
 				26CE8D362A8896A300EE3865 /* LaunchScreen.storyboard in Resources */,
 				26CE8D332A8896A300EE3865 /* Assets.xcassets in Resources */,
@@ -252,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264669DC2A8D268E00D771BA /* TMDBViewController.swift in Sources */,
 				26E2A08E2A88E2B400DE1FC5 /* DetailViewController.swift in Sources */,
 				26E2A08C2A88BE0300DE1FC5 /* NetWorkManager.swift in Sources */,
 				26CE8D2E2A8896A100EE3865 /* MainViewController.swift in Sources */,
@@ -264,6 +278,8 @@
 				26E2A0872A88BA0400DE1FC5 /* TMDBTV.swift in Sources */,
 				26E2A0932A88EC4900DE1FC5 /* Media.swift in Sources */,
 				26CE8D402A889E2C00EE3865 /* MediaTableViewCell.swift in Sources */,
+				264669D92A8D1F6F00D771BA /* HeaderCollectionReusableView.swift in Sources */,
+				264669DE2A8D2EF500D771BA /* Witcher.swift in Sources */,
 				26CE8D2C2A8896A100EE3865 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

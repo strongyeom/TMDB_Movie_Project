@@ -26,29 +26,29 @@ class MainViewController: UIViewController {
         setupNavibar()
         setupMovie()
         setupMedia()
-        setupNetworkMovie()
-        setupNetworkTV()
+//        setupNetworkMovie()
+//        setupNetworkTV()
     }
     
     func setupNavibar() {
         navigationItem.title = "TMDB 데이터"
     }
     
-    func setupNetworkMovie() {
-        NetworkManger.shared.callMovieRequest { result in
-            self.movieList = result.results
-            self.movieCollectionView.reloadData()
-        }
-    }
-    
-    func setupNetworkTV() {
-
-        NetworkManger.shared.callTVRequest { result in
-            self.tvList = result.results
-            print("tvList",self.tvList!)
-            self.mediaTableView.reloadData()
-        }
-    }
+//    func setupNetworkMovie() {
+//        NetworkManger.shared.callMovieRequest { result in
+//            self.movieList = result.results
+//            self.movieCollectionView.reloadData()
+//        }
+//    }
+//
+//    func setupNetworkTV() {
+//
+//        NetworkManger.shared.callTVRequest { result in
+//            self.tvList = result.results
+//            print("tvList",self.tvList!)
+//            self.mediaTableView.reloadData()
+//        }
+//    }
  
 }
 
@@ -78,16 +78,16 @@ extension MainViewController: UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("TableView - \(indexPath.row)")
-        guard let tvList else { return }
-        let selected = tvList[indexPath.row]
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
-        vc.id = selected.id
-        vc.media = .tv
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("TableView - \(indexPath.row)")
+//        guard let tvList else { return }
+//        let selected = tvList[indexPath.row]
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
+//        vc.id = selected.id
+//        vc.media = .tv
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
 }
 
 
@@ -108,22 +108,22 @@ extension MainViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.identifier, for: indexPath) as? MovieCollectionViewCell else { return UICollectionViewCell() }
         guard let movieList else { return UICollectionViewCell() }
         let item = movieList[indexPath.item]
-        cell.confiure(item: item)
+       // cell.confiure(item: item)
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("collectionView - \(indexPath.row)")
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        guard let movieList else { return }
-        let selected = movieList[indexPath.item]
-        
-        guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
-        vc.id = selected.id
-        vc.media = .movie
-        vc.title = "영화 상세 정보"
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print("collectionView - \(indexPath.row)")
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        guard let movieList else { return }
+//        let selected = movieList[indexPath.item]
+//
+//        guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
+//        vc.id = selected.id
+//        vc.media = .movie
+//        vc.title = "영화 상세 정보"
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
     
 }
 

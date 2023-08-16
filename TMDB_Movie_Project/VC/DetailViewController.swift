@@ -36,11 +36,11 @@ class DetailViewController: UIViewController {
             self.mediaImage.clipsToBounds = true
         }
         
-        NetworkManger.shared.detailRequest(id: id, media: media) { result in
-            guard let result else { return }
-            print("DetailVC - reuslt \(result)")
-            self.setup(result)
-        }
+//        NetworkManger.shared.detailRequest(id: id, media: media) { result in
+//            guard let result else { return }
+//            print("DetailVC - reuslt \(result)")
+//            self.setup(result)
+//        }
     }
  
     func setup(_ result: Media) {

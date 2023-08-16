@@ -35,3 +35,9 @@ extension MovieCollectionViewCell : MediaReusableViewProtocol {
         }
     }
 }
+
+extension HeaderCollectionReusableView : MediaReusableViewProtocol {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
